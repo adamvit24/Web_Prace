@@ -1,6 +1,46 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Kontakt";
 }
-<h1>@ViewData["Title"]</h1>
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt - Restaurace U Arouše</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <img src="obrazky1/Logo.jpg" alt="Logo Restaurace U Arouše" class="logo">
+
+            <nav>
+                <ul class="menu">
+                    <li><a asp-action="Index">Úvod</a></li>
+                    <li><a asp-action="Menu">Menu</a></li>
+                    <li><a asp-action="Privacy" class="active">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Kontaktujte nás</h1>
+        <p>Těšíme se na vaši návštěvu!</p>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Restaurace U Arouše</p>
+            <p>
+                <a href="#">Instagram</a> |
+                <a href="#">Facebook</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
 
 

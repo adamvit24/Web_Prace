@@ -1,9 +1,7 @@
-﻿namespace Web_prace.Views.Home
-{
-    public class menu
-    {
-    }
+﻿@{
+    ViewData["Title"] = "Menu";
 }
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -19,9 +17,9 @@
 
             <nav>
                 <ul class="menu">
-                    <li><a href="index.html">Úvod</a></li>
-                    <li><a href="menu.html" class="active">Menu</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a asp-action="Index">Úvod</a></li>
+                    <li><a asp-action="Menu" class="active">Menu</a></li>
+                    <li><a asp-action="Privacy">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
