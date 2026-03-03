@@ -18,9 +18,12 @@
 
             <nav>
                 <ul class="menu">
-                    <li><a asp-action="Index">Úvod</a></li>
-                    <li><a asp-action="Menu" class="active">Menu</a></li>
-                    <li><a asp-action="Privacy">Kontakt</a></li>
+                    <li><a asp-action="Index" asp-controller="Home">Úvod</a></li>
+                    <li><a asp-action="Menu" asp-controller="Home">Menu</a></li>
+                    <li><a asp-action="Privacy" asp-controller="Home">Kontakt</a></li>
+                    <li><a asp-action="Register" asp-controller="User">Registrace</a></li>
+                    <li><a asp-action="Login" asp-controller="User">Přihlášení</a></li>
+                    <li><a asp-action="Dashboard" asp-controller="User">Profil</a></li>
                 </ul>
             </nav>
         </div>
