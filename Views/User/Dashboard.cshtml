@@ -22,13 +22,21 @@
                     <li><a asp-action="Privacy" asp-controller="Home">Kontakt</a></li>
                     <li><a asp-action="Register" asp-controller="User">Registrace</a></li>
                     <li><a asp-action="Login" asp-controller="User">Přihlášení</a></li>
-                    <li><a asp-action="Dashboard" asp-controller="User">Profil</a></li>
+                    <li><a asp-action="Dashboard" asp-controller="User" class="active">Profil</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container">
+        @if (ViewData["Jmeno"] != null)
+        {
+            <div style="background-color: #d4edda; border: 1px solid #c3e6cb; border-radius: 4px; padding: 15px; margin: 20px 0; text-align: center;">
+                <h2 style="color: #155724; margin-top: 0;">Úspěšně jste se přihlásili pod účtem <strong>@ViewData["Jmeno"]</strong></h2>
+                <p style="color: #155724;">Vítej mezi Námi!</p>
+            </div>
+        }
+
         <h1>Váš profil</h1>
         <!-- Obsah po přihlášení bude zde -->
     </main>

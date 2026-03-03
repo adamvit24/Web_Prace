@@ -8,6 +8,30 @@
     <meta charset="UTF-8">
     <title>Registrace - Restaurace U Arouše</title>
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .submit-btn {
+            background-color: #fff;
+            border: 2px solid #333;
+            color: #333;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #ffcc00;
+            color: #fff;
+            border-color: #ffcc00;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
 
@@ -20,10 +44,9 @@
                     <li><a asp-action="Index" asp-controller="Home">Úvod</a></li>
                     <li><a asp-action="Menu" asp-controller="Home">Menu</a></li>
                     <li><a asp-action="Privacy" asp-controller="Home">Kontakt</a></li>
-                    <li><a asp-action="Register" asp-controller="User">Registrace</a></li>
+                    <li><a asp-action="Register" asp-controller="User" class="active">Registrace</a></li>
                     <li><a asp-action="Login" asp-controller="User">Přihlášení</a></li>
                     <li><a asp-action="Dashboard" asp-controller="User">Profil</a></li>
-                    
                 </ul>
             </nav>
         </div>
@@ -31,7 +54,25 @@
 
     <main class="container">
         <h1>Registrace</h1>
-        <!-- Obsah registrace bude zde -->
+        <form asp-action="Register" method="post" style="max-width: 400px; margin: 30px auto;">
+            <div style="margin-bottom: 15px;">
+                <label for="jmeno">Jméno:</label>
+                <input type="text" id="jmeno" name="jmeno" required>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label for="heslo">Heslo:</label>
+                <input type="password" id="heslo" name="heslo" required>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="heslo2">Potvrzení hesla:</label>
+                <input type="password" id="heslo2" name="heslo2" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Zaregistrovat se</button>
+        </form>
+        <p>Už máte účet? <a asp-action="Login" asp-controller="User">Přihlaste se</a></p>
     </main>
 
     <footer>
