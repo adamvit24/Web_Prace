@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace Web_prace
 {
     public class Program
@@ -8,6 +10,11 @@ namespace Web_prace
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // Configure EF Core DbContext
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            builder.Services.AddDbContext<Web_prace.Data.ApplicationDbContext>(options =>
+                options.UseSqlServer(connectionString));
 
             var app = builder.Build();
 
