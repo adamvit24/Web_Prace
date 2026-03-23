@@ -2,6 +2,28 @@
     ViewData["Title"] = "Dashboard";
 }
 
+<style>
+    .submit-btn {
+        background-color: #fff;
+        border: 2px solid #333;
+        color: #333;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .submit-btn:hover {
+        background-color: #ffcc00;
+        color: #fff;
+        border-color: #ffcc00;
+    }
+</style>
+
 <div class="container">
     @if (ViewData["Jmeno"] != null)
     {
@@ -12,5 +34,8 @@
     }
 
     <h1>Váš profil</h1>
-    <!-- Obsah po přihlášení bude zde -->
+
+    <p>
+        <a asp-action="Logout" asp-controller="User" class="submit-btn">Odhlásit se</a>
+    </p>
 </div>
